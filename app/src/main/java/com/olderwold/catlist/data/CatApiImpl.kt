@@ -12,7 +12,8 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 class CatApiImpl private constructor(
-    private val api: Api
+    private val api: Api,
+    private val catMapper: CatMapper,
 ) : CatApi {
 
     companion object Factory {
@@ -30,18 +31,20 @@ class CatApiImpl private constructor(
                 .baseUrl("https://api.thecatapi.com")
                 .build()
             val api = retrofit.create(Api::class.java)
-            return CatApiImpl(api)
+
+            return CatApiImpl(api, CatMapper())
         }
     }
 
     override fun catList(): Single<List<Cat>> {
         return api.list(limit = 5)
-            .map { listOf<Cat>() }
+            .map { listOfDtos ->
+                listOfDtos.filterNotNull().mapNotNull(catMapper::map)
+            }
     }
 
-    // https://api.thecatapi.com/v1/images/search?limit=5
     private interface Api {
         @GET("/v1/images/search")
-        fun list(@Query("limit") limit: Int): Single<List<CatDto>>
+        fun list(@Query("limit") limit: Int): Single<List<CatDto?>>
     }
 }
