@@ -1,0 +1,7 @@
+--verbose
+--reporter=plain
+--color
+--experimental
+--reporter=plain,output=/Users/tom.koptel/work/personal/sliide-task/platform/build/reports/ktlint/ktlintKotlinScriptFormat/ktlintKotlinScriptFormat.txt
+-F
+"build.gradle.kts"
