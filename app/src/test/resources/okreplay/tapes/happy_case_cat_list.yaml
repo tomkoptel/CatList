@@ -1,0 +1,27 @@
+!tape
+name: happy_case_cat_list
+interactions:
+- recorded: 2021-03-26T14:04:17.102Z
+  request:
+    method: GET
+    uri: https://api.thecatapi.com/v1/images/search?limit=5
+  response:
+    status: 200
+    headers:
+      Cache-Control: post-check=0, pre-check=0
+      Connection: keep-alive
+      Content-Length: '571'
+      Content-Type: application/json; charset=utf-8
+      Date: Fri, 26 Mar 2021 14:04:16 GMT
+      Expires: Tue, 03 Jul 2001 06:00:00 GMT
+      Last-Modified: Fri Mar 26 2021 14:04:16 GMT+0000 (Coordinated Universal Time)
+      Server: nginx/1.18.0
+      Strict-Transport-Security: max-age=15552000; includeSubDomains
+      Vary: Origin
+      X-Content-Type-Options: nosniff
+      X-DNS-Prefetch-Control: 'off'
+      X-Download-Options: noopen
+      X-Frame-Options: SAMEORIGIN
+      X-Response-Time: 3ms
+      X-XSS-Protection: 1; mode=block
+    body: '[{"breeds":[],"id":"7n2","url":"https://cdn2.thecatapi.com/images/7n2.jpg","width":500,"height":562},{"breeds":[],"id":"adf","url":"https://cdn2.thecatapi.com/images/adf.jpg","width":640,"height":480},{"breeds":[],"id":"bp0","url":"https://cdn2.thecatapi.com/images/bp0.jpg","width":562,"height":750},{"breeds":[],"categories":[{"id":14,"name":"sinks"}],"id":"MTc5NjU2OA","url":"https://cdn2.thecatapi.com/images/MTc5NjU2OA.jpg","width":2592,"height":1944},{"breeds":[],"id":"VsbZxsyGj","url":"https://cdn2.thecatapi.com/images/VsbZxsyGj.jpg","width":1280,"height":1010}]'
