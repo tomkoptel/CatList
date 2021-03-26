@@ -63,6 +63,8 @@ class CatListActivity : AppCompatActivity() {
                 }
             }.required()
         }
+
+        viewModel.load()
     }
 
     @Suppress("SimpleRedundantLet")

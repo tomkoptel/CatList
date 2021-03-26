@@ -36,6 +36,8 @@ android {
 dependencies {
     implementation(platform(project(":platform")))
     kapt(platform(project(":platform")))
+    testImplementation(platform(project(":platform")))
+    androidTestImplementation(platform(project(":platform")))
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
