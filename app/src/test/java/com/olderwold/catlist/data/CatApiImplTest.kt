@@ -8,7 +8,7 @@ class CatApiImplTest {
     private val okReplayInterceptors = OkReplayInterceptor()
     private val okReplayConfig = OkReplayConfig.Builder()
         .interceptor(okReplayInterceptors)
-        .defaultMode(TapeMode.WRITE_ONLY)
+        .defaultMode(TapeMode.READ_ONLY)
         .build()
 
     private val catApi = CatApiImpl {

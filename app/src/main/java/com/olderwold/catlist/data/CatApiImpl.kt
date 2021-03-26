@@ -4,9 +4,7 @@ import com.olderwold.catlist.domain.Cat
 import com.olderwold.catlist.domain.CatApi
 import io.reactivex.Single
 import okhttp3.OkHttpClient
-import okhttp3.ResponseBody
 import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
@@ -44,6 +42,6 @@ class CatApiImpl private constructor(
     // https://api.thecatapi.com/v1/images/search?limit=5
     private interface Api {
         @GET("/v1/images/search")
-        fun list(@Query("limit") limit: Int): Single<Response<ResponseBody>>
+        fun list(@Query("limit") limit: Int): Single<List<CatDto>>
     }
 }
