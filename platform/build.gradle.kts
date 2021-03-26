@@ -12,6 +12,7 @@ dependencies {
         api("androidx.appcompat:appcompat:1.2.0")
         api("androidx.constraintlayout:constraintlayout:2.0.4")
         api("androidx.recyclerview:recyclerview:1.1.0")
+        api("com.github.bumptech.glide:glide:4.12.0")
 
         api("com.google.android.material:material:1.3.0")
 
